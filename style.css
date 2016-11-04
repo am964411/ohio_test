@@ -1,0 +1,36 @@
+body {
+	background-color: turquoise;
+}
+
+.center {
+	text-align: center;
+}
+
+div {
+	background-color: yellow;
+	padding-top: 100px;
+	width: 96%;
+	margin: 0 auto;
+	font-size: 2em;
+
+}
+
+h1 {
+	background-color: orange;
+}
+
+
+@media ( min-width: 768px) {
+
+	div {
+	font-size: 5em;
+	background-color: green;
+	margin-top: 25px;
+	width: 48%;
+	float: left;
+	margin: 1%;
+
+}
+
+}
+
