@@ -9,11 +9,14 @@ body {
 div {
 	background-color: yellow;
 	padding-top: 100px;
-	width: 96%;
-	margin: 0 auto;
 	font-size: 2em;
 
 }
+
+.container {
+	width: 100%;
+}
+
 
 h1 {
 	background-color: orange;
@@ -26,11 +29,15 @@ h1 {
 	font-size: 5em;
 	background-color: green;
 	margin-top: 25px;
-	width: 48%;
-	float: left;
-	margin: 1%;
 
 }
 
+}
+
+@media (min-width: 1180px) {
+	.container {
+		width: 1160px;
+		margin: 0 auto;
+	}
 }
 
