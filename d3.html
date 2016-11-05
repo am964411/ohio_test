@@ -42,6 +42,10 @@
 				    .domain([0, d3.max(dataset) * 1.1])
 				    .range([0, h]);	
 
+				var colorScale = d3.scale.linear()
+					.domain([0, d3.max(dataset)])
+					.range( ['grey', 'black']);    
+
 					
 
 
@@ -63,6 +67,10 @@
 				   .attr('width', xScale.rangeBand())
 				   .style('height', function(d){
 				   		return yScale(d);
+				   })
+
+				   .attr('fill', function(d, i){
+				   		return colorScale(i);
 				   });
 
 
