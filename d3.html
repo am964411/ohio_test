@@ -20,11 +20,11 @@
 
 			<script type="text/javascript">
 				
-				var dataset = _.map(_.range(100), function(i){
+				var dataset = _.map(_.range(1), function(i){
 					return Math.random() * 50;
 				});
 
-				var margin = {top:0, right: 0, bottom: 30, left: 40};
+				var margin = {top:80, right: 0, bottom: 50, left: 80};
 
 				var w = 600 - margin.left - margin.right,
 					h = 400 - margin.top - margin.bottom;
@@ -48,19 +48,29 @@
 					.orient('bottom')
 					.ticks(5);
 
-				svg.append('g')
-			       .attr('class', 'x axis')
-			       .attr('transform','translate(0, ' + (h+20) + ')' )
-			       .call(xAxis);
+					svg.append('g')
+				       .attr('class', 'x axis')
+				       .attr('transform','translate(0, ' + (h+20) + ')' )
+				       .call(xAxis);
 
-				
-
-				
 
 
 				var yScale = d3.scale.linear()
-				    .domain([0, d3.max(dataset) * 1.1])
-				    .range([0, h]);	
+				    .domain([0, 100])
+				    .range([h, 0]);	
+
+				var yAxis = d3.svg.axis()
+					.scale(yScale)
+					.orient('left')
+
+					svg.append('g')
+					.attr('class', 'y axis')
+					.attr('transform', 'translate(-20, 0)') 
+					.call(yAxis);  
+
+
+				  
+
 
 				var colorScale = d3.scale.quantile()
 					.domain([0, dataset.length / 4, dataset.length])
