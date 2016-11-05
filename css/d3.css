@@ -12,3 +12,7 @@ h2 {
 body {
 	background-color: teal;
 }
+
+#chartArea {
+	background-color: black;
+}
