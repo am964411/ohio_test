@@ -13,6 +13,10 @@ body {
 	background-color: teal;
 }
 
-#chartArea {
-	background-color: black;
+
+
+.axis path, .axis line {
+	stroke: #000;
+	stroke-width: 1px;
+	shape-rendering: crispEdges;
 }
