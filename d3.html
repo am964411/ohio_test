@@ -42,9 +42,9 @@
 				    .domain([0, d3.max(dataset) * 1.1])
 				    .range([0, h]);	
 
-				var colorScale = d3.scale.quantize()
-					.domain([0, dataset.length])
-					.range( ['grey','grey','grey','grey','grey','yellow','grey','grey','grey','grey',]);    
+				var colorScale = d3.scale.quantile()
+					.domain([0, dataset.length / 4, dataset.length])
+					.range( ['grey','yellow']);    
 
 					
 
