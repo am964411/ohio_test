@@ -20,7 +20,7 @@
 
 			<script type="text/javascript">
 				
-				var dataset = _.map(_.range(150), function(i){
+				var dataset = _.map(_.range(100), function(i){
 					return Math.random() * 50;
 				});
 
@@ -42,9 +42,9 @@
 				    .domain([0, d3.max(dataset) * 1.1])
 				    .range([0, h]);	
 
-				var colorScale = d3.scale.linear()
-					.domain([0, d3.max(dataset)])
-					.range( ['grey', 'black']);    
+				var colorScale = d3.scale.quantize()
+					.domain([0, dataset.length])
+					.range( ['grey','grey','grey','grey','grey','yellow','grey','grey','grey','grey',]);    
 
 					
 
