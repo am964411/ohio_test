@@ -20,7 +20,7 @@
 
 			<script type="text/javascript">
 				
-				var dataset = _.map(_.range(1), function(i){
+				var dataset = _.map(_.range(100), function(i){
 					return Math.random() * 50;
 				});
 
@@ -46,7 +46,7 @@
 				var xAxis = d3.svg.axis()
 					.scale(xScale)
 					.orient('bottom')
-					.ticks(5);
+					.ticks(5)
 
 					svg.append('g')
 				       .attr('class', 'x axis')
